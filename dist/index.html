@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="style.css" />
+
+        <!-- js -->
+        <script src="./main.js" defer></script>
+        <title>Password Generator</title>
+    </head>
+    <body>
+        <section class="generator-container">
+            <h1>Password Generator</h1>
+
+            <div>
+                <header class="heading">
+                    <h2 class="title">Generated password</h2>
+                </header>
+
+                <div class="result-container">
+                    <button id="copy" class="copy-btn">copy</button>
+                    <p class="generated-password" id="generated-password"></p>
+                </div>
+            </div>
+
+            <!-- settings section -->
+            <section class="settings">
+                <div class="setting">
+                    <h2 class="title">Length: <span id="length">4</span></h2>
+                    <div class="options range">
+                        <p class="num">4</p>
+                        <div class="slider">
+                            <input
+                                type="range"
+                                name="range"
+                                id="range"
+                                min="4"
+                                max="32"
+                            />
+                        </div>
+                        <p class="num">32</p>
+                    </div>
+                </div>
+
+                <div class="setting">
+                    <h2 class="title">Settings</h2>
+                    <div class="options toggle">
+                        <p>Include numbers</p>
+                        <div class="toggle-container">
+                            <input type="checkbox" id="number" name="theme" />
+                            <label for="number"></label>
+                        </div>
+                    </div>
+                    <div class="options toggle">
+                        <p>Include letters</p>
+                        <div class="toggle-container">
+                            <input
+                                type="checkbox"
+                                id="letter"
+                                name="theme"
+                                class="letter"
+                            />
+                            <label for="letter"></label>
+                        </div>
+                    </div>
+                    <div class="options toggle">
+                        <p>Include symbols</p>
+                        <div class="toggle-container">
+                            <input
+                                type="checkbox"
+                                id="symbol"
+                                name="theme"
+                                class="symbol"
+                            />
+                            <label for="symbol"></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button type="submit" class="btn" id="btn">
+                        Generate Password
+                    </button>
+                </div>
+            </section>
+        </section>
+    </body>
+</html>
